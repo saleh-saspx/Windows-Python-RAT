@@ -30,7 +30,7 @@ def clear():
 	windows = 'cls'
 	os.system([linux, windows][os.name == 'nt'])
 clear()
-print "\n [***] Please wait ...\n\n"
+print("\n [***] Please wait ...\n\n")
 #data = urllib.urlopen("https://api.ipify.org/")
 #ip = data.read()
 #os.system("python -m pip install wget")
@@ -54,29 +54,29 @@ banner += ' [5] Compile py File [pyinstaller].\n'
 banner += ' [6] Windows-Python-RAT GitHub.\n'
 banner += ' [7] About.\n'
 banner += ' [0] Exit.\n'
-print banner
+print(banner)
 number = input(" [?] WinRAT-Setup~# ")
 
 if number == 1:
 	clear()
-	print "\n [***] Please wait ...\n\n"
+	print("\n [***] Please wait ...\n\n")
 	os.system("python -m pip install --upgrade pip")
 	os.system("python -m pip install python-telegram-bot")
 	os.system("python -m pip install pyttsx")
 	os.system("python -m pip install autopy")
 	os.system("python -m pip install pyinstaller")
-	print '\n\n [+] Installation Completed !\n'
+	print('\n\n [+] Installation Completed !\n')
 	quit()
 
 elif number == 2:
 	clear()
  	if os.name == "nt":
- 		print "\n [***] Please wait ...\n\n [X] Error !\n [!] This Method for Linux and Run in Linux Machine !\n"
+ 		print("\n [***] Please wait ...\n\n [X] Error !\n [!] This Method for Linux and Run in Linux Machine !\n")
  		quit()
  	elif os.name != "nt":
- 		print "\n [***] Please wait ...\n\n"
+ 		print("\n [***] Please wait ...\n\n")
  		os.system("git clone https://github.com/The404Hacking/Windows-Python-RAT.git")
- 		print '\n\n [+] Windows-Python-RAT Cloned !\n Git: https://github.com/The404Hacking/Windows-Python-RAT\n'
+ 		print('\n\n [+] Windows-Python-RAT Cloned !\n Git: https://github.com/The404Hacking/Windows-Python-RAT\n')
  		quit()
 elif number ==3:
 	clear()
@@ -88,7 +88,7 @@ elif number ==3:
  Send Message to Telegram:
  https://T.me/Sir4m1R
 '''
-	print reportbug
+	print(reportbug)
 	quit()
 elif number == 4:
 	clear()
@@ -105,7 +105,7 @@ elif number == 4:
 
  [+] Good :D, Replace Your API-Token in Windows-Python-RAT.py ! (Line: 35)
 '''
-	print createbot
+	print(createbot)
  	def edit():
  		linux = 'gedit Windows-Python-RAT.py'
  		windows = 'notepad Windows-Python-RAT.py'
@@ -120,33 +120,33 @@ elif number == 5:
  Select a Method:
  [1] Console
  [2] No-Console'''
-	print installer
+	print(installer)
 	num = input("\n [?] WinRAT-Setup~# ")
 	if num == 1:
-		print "\n Console Method:"
+		print("\n Console Method:")
 		iconadrs = raw_input(" [?] Icon [*.ico] Address: ")
 		pyadrs = raw_input(" [?] Python [*.py] Address: ")
 		pyname = raw_input(" [?] Python File [*.py] Name: ")
-		print "\n [***] Please wait ...\n\n"
+		print("\n [***] Please wait ...\n\n")
 		os.system("pyinstaller -i "+iconadrs+" -F "+pyadrs)
 		exe1 = pyname
 		rexe = exe1.replace(".py" , "")
 		clear()
 		address1 = '\n [Ok] Python Script Console Compile Successfully !\n [+] Directory: \dist\n [+] File: {}.exe\n\n'.format(rexe)
-		print address1
+		print(address1)
 		quit()
 	elif num == 2:
-		print "\n No Console Method:"
+		print("\n No Console Method:")
 		iconadrs2 = raw_input(" [?] Icon [*.ico] Address: ")
 		pyadrs2 = raw_input(" [?] Python [*.py] Address: ")
 		pyname2 = raw_input(" [?] Python File [*.py] Name: ")
-		print "\n [***] Please wait ...\n\n"
+		print("\n [***] Please wait ...\n\n")
 		os.system("pyinstaller -i "+iconadrs2+" --noconsole -F "+pyadrs2)
 		exe2 = pyname2
 		rexe2 = exe2.replace(".py" , "")
 		#clear()
 		address2 = '\n [Ok] Python Script No-Console Compile Successfully !\n [+] Directory: \dist\n [+] File: {}.exe\n\n'.format(rexe2)
-		print address2
+		print(address2)
 		quit()
 	else:
 		quit()
@@ -163,18 +163,18 @@ elif number == 6:
  [1] Clone [for Linux]
  [2] Download [for Windows]
 '''
-	print txtgit
+	print(txtgit)
 	numbr = input(" [?] WinRAT-Setup~# ")
 	if numbr == 1:
 		clear()
-		print "\n [***] Please wait ...\n\n"
+		print("\n [***] Please wait ...\n\n")
 		os.system("git clone https://github.com/The404Hacking/Windows-Python-RAT.git")
-		print "\n\n [+] Clone Successfully !\n"
+		print("\n\n [+] Clone Successfully !\n")
 		quit()
 	elif numbr == 2:
-		print "\n [***] Please wait ...\n\n"
+		print("\n [***] Please wait ...\n\n")
 		os.system("start https://github.com/The404Hacking/Windows-Python-RAT/master/archive.zip")
-		print "\n\n [+] Download Successfully !\n"
+		print("\n\n [+] Download Successfully !\n")
 		quit()
 	else:
 		quit()
@@ -195,9 +195,9 @@ elif number == 7:
 	about_text += " Powered By Sir.4m1R.\n"
 	about_text += " Developed By Hanieh Panahi\n"
 	about_text += " Copyright (C) 2018 The404Hacking.\n"
-	print about_text
+	print(about_text)
 elif number == 0:
-	print "\n Good Bye "+platform.uname()[1]+" :)\n"
+	print("\n Good Bye "+platform.uname()[1]+" :)\n")
 else:
-	print " Error !"
+	print(" Error !")
 	quit()
